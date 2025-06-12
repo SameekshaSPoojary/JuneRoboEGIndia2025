@@ -1,0 +1,258 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.3 (Python 3.13.4 on win32)" generated="2025-06-12T09:44:16.165387" rpa="false" schemaversion="5">
+<suite id="s1" name="Excel" source="C:\Users\sampo\PycharmProjects\JuneRoboFwEgindia2025\DataDrivenTesting\Excel.robot">
+<kw name="Launch app" owner="DDTKeywords" type="SETUP">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2025-06-12T09:44:18.045258" level="INFO">Opening browser 'Firefox' to base url 'https://admin-demo.nopcommerce.com/login?returnurl=%2Fadmin%2F'.</msg>
+<arg>${url}</arg>
+<arg>${browser}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2025-06-12T09:44:18.044625" elapsed="10.406512"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2025-06-12T09:44:28.451912" elapsed="0.011098"/>
+</kw>
+<status status="PASS" start="2025-06-12T09:44:18.043403" elapsed="10.420300"/>
+</kw>
+<test id="s1-t1" name="Login with user admin@yourstore.com1 and admin" line="12">
+<kw name="InvalidLogin">
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-06-12T09:44:30.468011" level="INFO">Slept 2 seconds.</msg>
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-06-12T09:44:28.466987" elapsed="2.001333"/>
+</kw>
+<kw name="Set Email" owner="DDTKeywords">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-06-12T09:44:30.472036" level="INFO">Typing text 'admin@yourstore.com1' into text field 'xpath://input[@id='Email']'.</msg>
+<arg>xpath://input[@id='Email']</arg>
+<arg>${username}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-06-12T09:44:30.469601" elapsed="0.116695"/>
+</kw>
+<arg>${username}</arg>
+<status status="PASS" start="2025-06-12T09:44:30.468815" elapsed="0.117767"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-06-12T09:44:32.588174" level="INFO">Slept 2 seconds.</msg>
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-06-12T09:44:30.587116" elapsed="2.001442"/>
+</kw>
+<kw name="Set Password" owner="DDTKeywords">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-06-12T09:44:32.592635" level="INFO">Typing text 'admin' into text field 'xpath://input[@id='Password']'.</msg>
+<arg>xpath://input[@id='Password']</arg>
+<arg>${password}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-06-12T09:44:32.590798" elapsed="0.093559"/>
+</kw>
+<arg>${password}</arg>
+<status status="PASS" start="2025-06-12T09:44:32.589246" elapsed="0.095667"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-06-12T09:44:34.686689" level="INFO">Slept 2 seconds.</msg>
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-06-12T09:44:32.685378" elapsed="2.001628"/>
+</kw>
+<kw name="Click Login" owner="DDTKeywords">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-06-12T09:44:34.692282" level="INFO">Clicking element 'xpath://button[@type='submit']'.</msg>
+<arg>xpath://button[@type='submit']</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-06-12T09:44:34.688234" elapsed="0.313687"/>
+</kw>
+<status status="PASS" start="2025-06-12T09:44:34.687531" elapsed="0.314756"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-06-12T09:44:37.004261" level="INFO">Slept 2 seconds.</msg>
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-06-12T09:44:35.002660" elapsed="2.001986"/>
+</kw>
+<kw name="Error Message Should be Visible" owner="DDTKeywords">
+<kw name="Element Text Should Be" owner="SeleniumLibrary">
+<msg time="2025-06-12T09:44:37.006747" level="INFO">Verifying element 'xpath://span[@id='Email-error']' contains exact text 'Wrong email'.</msg>
+<arg>xpath://span[@id='Email-error']</arg>
+<arg>Wrong email</arg>
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<status status="PASS" start="2025-06-12T09:44:37.006230" elapsed="0.031139"/>
+</kw>
+<status status="PASS" start="2025-06-12T09:44:37.005356" elapsed="0.032378"/>
+</kw>
+<arg>username=admin@yourstore.com1</arg>
+<arg>password=admin</arg>
+<status status="PASS" start="2025-06-12T09:44:28.466534" elapsed="8.571368"/>
+</kw>
+<status status="PASS" start="2025-06-12T09:44:28.464080" elapsed="8.574589"/>
+</test>
+<test id="s1-t2" name="Login with user adm23@yourstore.com1 and admin" line="12">
+<kw name="InvalidLogin">
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-06-12T09:44:39.049403" level="INFO">Slept 2 seconds.</msg>
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-06-12T09:44:37.048647" elapsed="2.001117"/>
+</kw>
+<kw name="Set Email" owner="DDTKeywords">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-06-12T09:44:39.054633" level="INFO">Typing text 'adm23@yourstore.com1' into text field 'xpath://input[@id='Email']'.</msg>
+<arg>xpath://input[@id='Email']</arg>
+<arg>${username}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-06-12T09:44:39.054031" elapsed="0.092834"/>
+</kw>
+<arg>${username}</arg>
+<status status="PASS" start="2025-06-12T09:44:39.050632" elapsed="0.096482"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-06-12T09:44:41.148668" level="INFO">Slept 2 seconds.</msg>
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-06-12T09:44:39.147384" elapsed="2.001678"/>
+</kw>
+<kw name="Set Password" owner="DDTKeywords">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-06-12T09:44:41.151796" level="INFO">Typing text 'admin' into text field 'xpath://input[@id='Password']'.</msg>
+<arg>xpath://input[@id='Password']</arg>
+<arg>${password}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-06-12T09:44:41.150967" elapsed="0.074381"/>
+</kw>
+<arg>${password}</arg>
+<status status="PASS" start="2025-06-12T09:44:41.149794" elapsed="0.075784"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-06-12T09:44:43.265837" level="INFO">Slept 2 seconds.</msg>
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-06-12T09:44:41.225851" elapsed="2.040404"/>
+</kw>
+<kw name="Click Login" owner="DDTKeywords">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-06-12T09:44:43.269353" level="INFO">Clicking element 'xpath://button[@type='submit']'.</msg>
+<arg>xpath://button[@type='submit']</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-06-12T09:44:43.268775" elapsed="0.271790"/>
+</kw>
+<status status="PASS" start="2025-06-12T09:44:43.267760" elapsed="0.273162"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-06-12T09:44:45.542317" level="INFO">Slept 2 seconds.</msg>
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-06-12T09:44:43.541299" elapsed="2.001314"/>
+</kw>
+<kw name="Error Message Should be Visible" owner="DDTKeywords">
+<kw name="Element Text Should Be" owner="SeleniumLibrary">
+<msg time="2025-06-12T09:44:45.544515" level="INFO">Verifying element 'xpath://span[@id='Email-error']' contains exact text 'Wrong email'.</msg>
+<arg>xpath://span[@id='Email-error']</arg>
+<arg>Wrong email</arg>
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<status status="PASS" start="2025-06-12T09:44:45.544014" elapsed="0.026801"/>
+</kw>
+<status status="PASS" start="2025-06-12T09:44:45.543147" elapsed="0.027891"/>
+</kw>
+<arg>username=adm23@yourstore.com1</arg>
+<arg>password=admin</arg>
+<status status="PASS" start="2025-06-12T09:44:37.047813" elapsed="8.523334"/>
+</kw>
+<status status="PASS" start="2025-06-12T09:44:37.043845" elapsed="8.528636"/>
+</test>
+<test id="s1-t3" name="Login with user adm@yourstore.com1 and admin" line="12">
+<kw name="InvalidLogin">
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-06-12T09:44:47.578120" level="INFO">Slept 2 seconds.</msg>
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-06-12T09:44:45.577478" elapsed="2.000983"/>
+</kw>
+<kw name="Set Email" owner="DDTKeywords">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-06-12T09:44:47.580636" level="INFO">Typing text 'adm@yourstore.com1' into text field 'xpath://input[@id='Email']'.</msg>
+<arg>xpath://input[@id='Email']</arg>
+<arg>${username}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-06-12T09:44:47.580053" elapsed="0.087220"/>
+</kw>
+<arg>${username}</arg>
+<status status="PASS" start="2025-06-12T09:44:47.579085" elapsed="0.088545"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-06-12T09:44:49.669282" level="INFO">Slept 2 seconds.</msg>
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-06-12T09:44:47.668010" elapsed="2.001648"/>
+</kw>
+<kw name="Set Password" owner="DDTKeywords">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-06-12T09:44:49.672078" level="INFO">Typing text 'admin' into text field 'xpath://input[@id='Password']'.</msg>
+<arg>xpath://input[@id='Password']</arg>
+<arg>${password}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-06-12T09:44:49.671387" elapsed="0.066803"/>
+</kw>
+<arg>${password}</arg>
+<status status="PASS" start="2025-06-12T09:44:49.670346" elapsed="0.068151"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-06-12T09:44:51.750581" level="INFO">Slept 2 seconds.</msg>
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-06-12T09:44:49.738874" elapsed="2.013909"/>
+</kw>
+<kw name="Click Login" owner="DDTKeywords">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-06-12T09:44:51.757274" level="INFO">Clicking element 'xpath://button[@type='submit']'.</msg>
+<arg>xpath://button[@type='submit']</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-06-12T09:44:51.756481" elapsed="0.252460"/>
+</kw>
+<status status="PASS" start="2025-06-12T09:44:51.753633" elapsed="0.255696"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-06-12T09:44:54.011532" level="INFO">Slept 2 seconds.</msg>
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-06-12T09:44:52.009729" elapsed="2.002055"/>
+</kw>
+<kw name="Error Message Should be Visible" owner="DDTKeywords">
+<kw name="Element Text Should Be" owner="SeleniumLibrary">
+<msg time="2025-06-12T09:44:54.013756" level="INFO">Verifying element 'xpath://span[@id='Email-error']' contains exact text 'Wrong email'.</msg>
+<arg>xpath://span[@id='Email-error']</arg>
+<arg>Wrong email</arg>
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<status status="PASS" start="2025-06-12T09:44:54.012824" elapsed="0.019299"/>
+</kw>
+<status status="PASS" start="2025-06-12T09:44:54.012209" elapsed="0.020461"/>
+</kw>
+<arg>username=adm@yourstore.com1</arg>
+<arg>password=admin</arg>
+<status status="PASS" start="2025-06-12T09:44:45.576838" elapsed="8.455967"/>
+</kw>
+<status status="PASS" start="2025-06-12T09:44:45.574535" elapsed="8.459326"/>
+</test>
+<kw name="Close app" owner="DDTKeywords" type="TEARDOWN">
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2025-06-12T09:44:54.037017" elapsed="3.798340"/>
+</kw>
+<status status="PASS" start="2025-06-12T09:44:54.036073" elapsed="3.799740"/>
+</kw>
+<status status="PASS" start="2025-06-12T09:44:16.169913" elapsed="41.666080"/>
+</suite>
+<statistics>
+<total>
+<stat pass="3" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat name="Excel" id="s1" pass="3" fail="0" skip="0">Excel</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

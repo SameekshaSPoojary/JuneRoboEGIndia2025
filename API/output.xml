@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.3 (Python 3.13.4 on win32)" generated="2025-06-12T11:17:34.332597" rpa="false" schemaversion="5">
+<suite id="s1" name="DELETE" source="C:\Users\sampo\PycharmProjects\JuneRoboFwEgindia2025\API\DELETE.robot">
+<test id="s1-t1" name="DELETe request example" line="9">
+<kw name="Create Session" owner="RequestsLibrary">
+<msg time="2025-06-12T11:17:34.956057" level="INFO">Creating Session using : alias=baseURI, url=https://reqres.in/, headers={},                     cookies={}, auth=None, timeout=None, proxies=None, verify=True,                     debug=0 </msg>
+<arg>baseURI</arg>
+<arg>${base_url}</arg>
+<arg>verify=True</arg>
+<doc>Create Session: create a HTTP session to a server</doc>
+<status status="PASS" start="2025-06-12T11:17:34.955551" elapsed="0.000901"/>
+</kw>
+<kw name="Create Dictionary" owner="BuiltIn">
+<msg time="2025-06-12T11:17:34.958680" level="INFO">&amp;{headers} = { content-type=application/json }</msg>
+<var>&amp;{headers}</var>
+<arg>content-type=application/json</arg>
+<doc>Creates and returns a dictionary based on the given ``items``.</doc>
+<status status="PASS" start="2025-06-12T11:17:34.958121" elapsed="0.000615"/>
+</kw>
+<kw name="Create Dictionary" owner="BuiltIn">
+<msg time="2025-06-12T11:17:34.959472" level="INFO">&amp;{headers} = { x-api-key=reqres-free-v1 }</msg>
+<var>&amp;{headers}</var>
+<arg>x-api-key=reqres-free-v1</arg>
+<doc>Creates and returns a dictionary based on the given ``items``.</doc>
+<status status="PASS" start="2025-06-12T11:17:34.959182" elapsed="0.000330"/>
+</kw>
+<kw name="DELETE On Session" owner="RequestsLibrary">
+<msg time="2025-06-12T11:17:35.593513" level="INFO">DELETE Request : url=https://reqres.in/api/users/2 
+ path_url=/api/users/2 
+ headers={'User-Agent': 'python-requests/2.32.4', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive', 'x-api-key': 'reqres-free-v1', 'Content-Length': '0'} 
+ body=None 
+ </msg>
+<msg time="2025-06-12T11:17:35.593741" level="INFO">DELETE Response : url=https://reqres.in/api/users/2 
+ status=204, reason=No Content 
+ headers={'Date': 'Thu, 12 Jun 2025 05:47:36 GMT', 'Connection': 'keep-alive', 'Cf-Ray': '94e70dedc818c151-BLR', 'Report-To': '{"group":"heroku-nel","max_age":3600,"endpoints":[{"url":"https://nel.heroku.com/reports?ts=1749707256&amp;sid=c4c9725f-1ab0-44d8-820f-430df2718e11&amp;s=dFn4e8gOEtOsG2xrK2%2FnCeHnjnUSTtPhgiZfERl5AFM%3D"}]}', 'Reporting-Endpoints': 'heroku-nel=https://nel.heroku.com/reports?ts=1749707256&amp;sid=c4c9725f-1ab0-44d8-820f-430df2718e11&amp;s=dFn4e8gOEtOsG2xrK2%2FnCeHnjnUSTtPhgiZfERl5AFM%3D', 'Nel': '{"report_to":"heroku-nel","max_age":3600,"success_fraction":0.005,"failure_fraction":0.05,"response_headers":["Via"]}', 'X-Powered-By': 'Express', 'Access-Control-Allow-Origin': '*', 'Ratelimit-Policy': '100;w=60', 'Ratelimit-Limit': '100', 'Ratelimit-Remaining': '93', 'Ratelimit-Reset': '41', 'Etag': 'W/"2-vyGp6PvFo4RvsFtPoIWeCReyIC8"', 'Via': '1.1 vegur', 'Cf-Cache-Status': 'DYNAMIC', 'Server': 'cloudflare', 'server-timing': 'cfL4;desc="?proto=TCP&amp;rtt=38148&amp;min_rtt=38138&amp;rtt_var=10743&amp;sent=4&amp;recv=6&amp;lost=0&amp;retrans=0&amp;sent_bytes=2833&amp;recv_bytes=819&amp;delivery_rate=75805&amp;cwnd=246&amp;unsent_bytes=0&amp;cid=93bc8e48408c00b4&amp;ts=430&amp;x=0"'} 
+ body=None 
+ </msg>
+<msg time="2025-06-12T11:17:35.594046" level="INFO">${response} = &lt;Response [204]&gt;</msg>
+<var>${response}</var>
+<arg>baseURI</arg>
+<arg>${Servicename}</arg>
+<arg>headers=${headers}</arg>
+<doc>Sends a DELETE request on a previously created HTTP Session.</doc>
+<status status="PASS" start="2025-06-12T11:17:34.959914" elapsed="0.634185"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2025-06-12T11:17:35.595027" level="INFO">&lt;Response [204]&gt;</msg>
+<arg>${response}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2025-06-12T11:17:35.594689" elapsed="0.000509"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2025-06-12T11:17:35.596830" level="INFO">204</msg>
+<arg>${response.status_code}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2025-06-12T11:17:35.595699" elapsed="0.001220"/>
+</kw>
+<status status="PASS" start="2025-06-12T11:17:34.954096" elapsed="0.643128"/>
+</test>
+<status status="PASS" start="2025-06-12T11:17:34.339324" elapsed="1.259983"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat name="DELETE" id="s1" pass="1" fail="0" skip="0">DELETE</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
