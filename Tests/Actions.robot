@@ -14,7 +14,7 @@ Verify login success with valid credentials
         Call Method    ${chrome options}    add_argument    --no-sandbox
         Call Method    ${chrome options}    add_argument    --disable-dev-shm-usage
         Create WebDriver    Chrome    options=${chrome options}
-        Go To     https://www.amazon.in        
+        Go To     https://www.amazon.in
         Maximize Browser Window
         
         #right click
