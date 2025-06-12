@@ -15,7 +15,8 @@ Verify login success with valid credentials
         Call Method    ${chrome options}    add_argument    --no-sandbox
         Call Method    ${chrome options}    add_argument    --disable-dev-shm-usage
         Create WebDriver    Chrome    options=${chrome options}
-        Go To     https://the-internet.herokuapp.com/javascript_a        Maximize Browser Window        
+        Go To     https://the-internet.herokuapp.com/javascript_a        
+        Maximize Browser Window        
         Sleep    2s
         Click Element    css:button[onclick='jsAlert()']
         Sleep    2s
